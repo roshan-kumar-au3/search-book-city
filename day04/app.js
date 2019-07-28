@@ -23,11 +23,8 @@ $.ajax({
     searchedForLetter = searchField.value;
     $("#response-container ul").html("");
     for(var i = 0; i < cities.length; i++) {
-         if(cities[i].name.charAt(0).toLowerCase().concat(cities[i].name.charAt(1).toLowerCase()) == searchedForLetter || cities[i].name.charAt(0).toLowerCase() == searchedForLetter) {
+         if(cities[i].name.charAt(0).toLowerCase().concat(cities[i].name.charAt(1).toLowerCase()) == searchedForLetter.toLowerCase() || cities[i].name.charAt(0).toLowerCase() == searchedForLetter.toLowerCase()) {
              $("#response-container ul").append('<li>City:'+cities[i].name+'<br><span> State :'+cities[i].state+'<span></li>');
          }
      }
 });
-
-
- 
