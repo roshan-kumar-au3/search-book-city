@@ -1,0 +1,87 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #fafbfc;
+    font-family: OpenSans, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.site-container {
+    margin: auto;
+    max-width: 1200px;
+    width: 80%;
+}
+
+.masthead {
+    background: #2e3d49;
+    padding: 2em 0;
+}
+
+.masthead h1 {
+    color: #ffffff;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 0.2em;
+    text-align: center;
+}
+
+#search-form {
+    display: flex;
+    padding: 1em 0;
+}
+
+#search-keyword {
+    border: none;
+    border-radius: 4px;
+    flex-grow: 1;
+    margin-right: 1.5em;
+    padding: 1.25 em 2em;
+}
+
+ #submit-btn {
+    background-color: #15c26b;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 1em 4em;
+    text-transform: uppercase;
+}
+
+#submit-btn:hover {
+    background-color: #12a159;
+}
+
+#response-container {
+    margin-top: 2em;
+}
+/*** Helpers ***/
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+li {
+    color: #bb2d1a;
+    padding: 0.5em 0;
+}
+
+span {
+    color: #aaafb3;
+}
