@@ -22,9 +22,14 @@ $.ajax({
     e.preventDefault();
     searchedForLetter = searchField.value;
     $("#response-container ul").html("");
+    $("#response-container ol").html("");
     for(var i = 0; i < cities.length; i++) {
-         if(cities[i].name.charAt(0).toLowerCase().concat(cities[i].name.charAt(1).toLowerCase()) == searchedForLetter.toLowerCase() || cities[i].name.charAt(0).toLowerCase() == searchedForLetter.toLowerCase()) {
+        if (cities[i].name.charAt(0).toLowerCase().concat(cities[i].name.charAt(1).toLowerCase()) == searchedForLetter.toLowerCase() || cities[i].name.charAt(0).toLowerCase() == searchedForLetter.toLowerCase()) {
              $("#response-container ul").append('<li>City:'+cities[i].name+'<br><span> State :'+cities[i].state+'<span></li>');
          }
-     }
+
+         if(cities[i].state.toLowerCase() == searchedForLetter.toLowerCase()) {
+           $("#response-container ol").append('<li>City: '+cities[i].name+'</li>');
+         }
+    }
 });
